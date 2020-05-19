@@ -1,4 +1,4 @@
-C:\xampp\htdocs\spring-restfull-crud\src\main\java\com\javahelps\restservice\entity\Classe.java
-C:\xampp\htdocs\spring-restfull-crud\src\main\java\com\javahelps\restservice\repository\ClasseRepository.java
-C:\xampp\htdocs\spring-restfull-crud\src\main\java\com\javahelps\restservice\controller\ClasseController.java
+C:\xampp\htdocs\spring-restfull-crud\src\main\java\com\javahelps\restservice\controller\StudenteController.java
+C:\xampp\htdocs\spring-restfull-crud\src\main\java\com\javahelps\restservice\repository\StudenteRepository.java
+C:\xampp\htdocs\spring-restfull-crud\src\main\java\com\javahelps\restservice\entity\Studente.java
 C:\xampp\htdocs\spring-restfull-crud\src\main\java\com\javahelps\restservice\Application.java
