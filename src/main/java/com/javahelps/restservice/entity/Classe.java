@@ -1,37 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */package com.javahelps.restservice.entity;
+package com.javahelps.restservice.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-/**
- *
- * @author giuli
- */
 @Entity
-public class Classe 
+@Table(name= "class")
+public class Classe
 {
     @Id
-    private int Id;
-    private int year;
+    private Integer id;
+    private Integer year;
     private String section;
 
     public int getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
@@ -45,7 +39,8 @@ public class Classe
 
     @Override
     public String toString() {
-        return "Classe{" + "id='" + Id + '\'' + ", section='" + section + '\'' + ", year='" + year + '\'' + '}';
+        return "Classe{" + "id='" + id + '\'' + ", year='" + year + '\'' + ", section=" + section + '\'' + '}';
     }
+    
     
 }

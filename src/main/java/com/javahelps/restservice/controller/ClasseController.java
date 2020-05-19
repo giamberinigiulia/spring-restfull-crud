@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.javahelps.restservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,46 +11,52 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.javahelps.restservice.entity.Classe;
-
-import javassist.tools.web.BadHttpRequest;
 import com.javahelps.restservice.repository.ClasseRepository;
 
+import javassist.tools.web.BadHttpRequest;
 
 @RestController
-@RequestMapping(path = "/classes")
-public class ClasseController {
-
+@RequestMapping(path = "/classi")
+public class ClasseController
+{
     @Autowired
     private ClasseRepository repository;
 
     @GetMapping
-    public Iterable<Classe> findAll() {
+    public Iterable<Classe> findAll()
+    {
         return repository.findAll();
     }
 
     @GetMapping(path = "/{id}")
-    public Classe find(@PathVariable("id") Integer id) {
-        return repository.findOne(id);
+    public Classe find(@PathVariable("id") Integer id)
+    {
+        return repository.getOne(id.toString());
     }
 
     @PostMapping(consumes = "application/json")
-    public Classe create(@RequestBody Classe classe) {
+    public Classe create(@RequestBody Classe classe)
+    {
         return repository.save(classe);
     }
 
-    @DeleteMapping(path = "/{id}")
-    public void delete(@PathVariable("id") Integer id) {
-        repository.delete(id);
+    /*@DeleteMapping(path = "/{id}")
+    public void delete(@PathVariable("id") Integer id)
+    {
+        repository.delete(id.toString());
     }
 
     @PutMapping(path = "/{id}")
-    public Classe update(@PathVariable("id") Integer id, @RequestBody Classe classe) throws BadHttpRequest {
-        if (repository.exists(id)) {
+    public Classe update(@PathVariable("id") Integer id, @RequestBody Classe classe) throws BadHttpRequest
+    {
+        if (repository.exists(id.toString()))
+        {
             classe.setId(id);
             return repository.save(classe);
-        } else {
+        }
+        else
+        {
             throw new BadHttpRequest();
         }
-    }
+    }*/
 }
-
